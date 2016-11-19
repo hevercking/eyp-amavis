@@ -9,7 +9,7 @@ class amavis::params {
     {
       case $::operatingsystemrelease
       {
-        /^[5-7].*$/:
+        /^7.*$/:
         {
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
@@ -25,6 +25,7 @@ class amavis::params {
           {
             /^14.*$/:
             {
+              fail('TODO')
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
