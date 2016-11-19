@@ -10,6 +10,8 @@ class amavis(
               $mydomain              = $::domain,
               $myhostname            = $::fqdn,
               $listen_port           = '10024',
+              $username = 'amavis',
+              $group = 'amavis',
             ) inherits amavis::params{
 
   validate_re($package_ensure, [ '^present$', '^installed$', '^absent$', '^purged$', '^held$', '^latest$' ], 'Not a supported package_ensure: present/absent/purged/held/latest')
