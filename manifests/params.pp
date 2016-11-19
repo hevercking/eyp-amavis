@@ -1,6 +1,6 @@
 class amavis::params {
 
-  $package_name='amavis'
+  $package_name='amavisd-new'
   $service_name='amavis'
 
   case $::osfamily
