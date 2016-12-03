@@ -5,7 +5,7 @@ class amavis(
               $manage_docker_service = true,
               $service_ensure        = 'running',
               $service_enable        = true,
-              $install_clamav        = true,
+              $setup_clamav          = true,
               $max_servers           = '2',
               $mydomain              = $::domain,
               $myhostname            = $::fqdn,
