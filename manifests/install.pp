@@ -1,6 +1,6 @@
 class amavis::install inherits amavis {
 
-  if($amavis::install_clamav)
+  if($amavis::setup_clamav)
   {
     class { 'clamav': } ->
     class { 'clamav::freshclam': } ->
