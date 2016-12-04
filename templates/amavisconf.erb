@@ -9,7 +9,9 @@ use strict;
 
 # COMMONLY ADJUSTED SETTINGS:
 
-# @bypass_virus_checks_maps = (1);  # controls running of anti-virus code
+<% if @bypass_virus_checks_maps -%>
+@bypass_virus_checks_maps = (1);  # controls running of anti-virus code
+<% end -%>
 <% if @bypass_spam_checks_maps -%>
 @bypass_spam_checks_maps  = (1);  # controls running of anti-spam code
 <% end -%>

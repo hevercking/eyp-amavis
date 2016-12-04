@@ -17,6 +17,7 @@ class amavis(
               $mydomain                = $::domain,
               $bypass_spam_checks_maps = true,
               $bypass_decode_parts     = false,
+              $bypass_virus_checks_maps = false,
             ) inherits amavis::params{
 
   validate_re($package_ensure, [ '^present$', '^installed$', '^absent$', '^purged$', '^held$', '^latest$' ], 'Not a supported package_ensure: present/absent/purged/held/latest')
