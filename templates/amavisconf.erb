@@ -13,7 +13,9 @@ use strict;
 <% if @bypass_spam_checks_maps -%>
 @bypass_spam_checks_maps  = (1);  # controls running of anti-spam code
 <% end -%>
-# $bypass_decode_parts = 1;         # controls running of decoders&dearchivers
+<% if @bypass_decode_parts -%>
+$bypass_decode_parts = 1;         # controls running of decoders&dearchivers
+<% end -%>
 
 $max_servers = <%= @max_servers %>;            # num of pre-forked children (2..30 is common), -m
 $daemon_user  = '<%= @username %>';    # (no default;  customary: vscan or amavis), -u
