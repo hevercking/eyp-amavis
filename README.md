@@ -42,7 +42,7 @@ management, etc.) this is the time to mention it.
 
 ### Setup Requirements
 
-This module requires pluginsync enabled 
+This module requires pluginsync enabled
 
 ### Beginning with amavis
 
@@ -75,7 +75,26 @@ have some test to check both presence and absence of any feature
 
 ### TODO
 
-TODO list
+* arreglar:
+```
+[root@centos7 log]# telnet localhost 10025
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+ehlo caca
+
+
+
+Dec  4 14:06:44 centos7 postfix/smtpd[22707]: connect from unknown[127.0.0.1]
+Dec  4 14:06:44 centos7 postfix/smtpd[22707]: warning: SASL: Connect to /var/run/dovecot/auth-client failed: No such file or directory
+Dec  4 14:06:44 centos7 postfix/smtpd[22707]: fatal: no SASL authentication mechanisms
+Dec  4 14:06:44 centos7 postfix/smtpd[22707]: connect from unknown[127.0.0.1]
+Dec  4 14:06:44 centos7 postfix/smtpd[22707]: warning: SASL: Connect to /var/run/dovecot/auth-client failed: No such file or directory
+Dec  4 14:06:44 centos7 postfix/smtpd[22707]: fatal: no SASL authentication mechanisms
+
+```
 
 ### Contributing
 
