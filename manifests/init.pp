@@ -14,6 +14,7 @@ class amavis(
               $group                 = 'amavis',
               $log_level             = '0',
               $syslog_facility       = 'mail',
+              $mydomain              = $::domain,
             ) inherits amavis::params{
 
   validate_re($package_ensure, [ '^present$', '^installed$', '^absent$', '^purged$', '^held$', '^latest$' ], 'Not a supported package_ensure: present/absent/purged/held/latest')
