@@ -9,6 +9,11 @@ class amavis::install inherits amavis {
     }
   }
 
+  if($amavis::setup_spamassassin)
+  {
+    class { 'spamassassin': }
+  }
+
   if($amavis::manage_package)
   {
     package { $amavis::params::package_name:
