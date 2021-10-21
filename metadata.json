@@ -1,6 +1,6 @@
 {
   "name": "eyp-amavis",
-  "version": "1.0.1",
+  "version": "0.1.1",
   "author": "Jordi Prats",
   "summary": "amavis management",
   "license": "Apache-2.0",
